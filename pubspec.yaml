@@ -1,0 +1,58 @@
+name: animal_detector
+description: A new Flutter project.
+
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #state management
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
+  #data class generation
+  freezed_annotation: ^2.1.0
+  #dependency injection
+  get_it: ^7.2.0
+  #ui
+  percent_indicator: ^4.2.2
+  #utility
+  image_picker: ^0.8.5+3
+  tflite:
+    git:
+      url: https://github.com/zhengbomo/flutter_tflite
+      ref: master
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  #linter  
+  flutter_lints: ^2.0.0
+  #code generation
+  freezed: ^2.1.0+1
+  build_runner: ^2.2.0
+  
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/ml_model/
+    - assets/icons/
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
