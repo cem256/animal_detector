@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:tflite/tflite.dart';
 
-import '../constants/assets.dart';
+import '../gen/assets.gen.dart';
 
 abstract class TensorFlowService {
   Future<String?> loadModel();
@@ -13,8 +13,8 @@ class TensorFlowServiceImp implements TensorFlowService {
   @override
   Future<String?> loadModel() async {
     String? model = await Tflite.loadModel(
-      model: Assets.animalMlModel,
-      labels: Assets.animalMlModelLabels,
+      model: Assets.mlModel.animalMlModel,
+      labels: Assets.mlModel.animalMlModelLabels,
     );
     return model;
   }

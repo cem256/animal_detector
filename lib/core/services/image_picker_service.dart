@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 
 abstract class ImagePickerService {
   Future<File?> selectFromGallery();
-  Future<XFile?> takePhoto();
+  Future<File?> takePhoto();
 }
 
 class ImagePickerServiceImp implements ImagePickerService {
@@ -22,8 +22,11 @@ class ImagePickerServiceImp implements ImagePickerService {
   }
 
   @override
-  Future<XFile?> takePhoto() async {
+  Future<File?> takePhoto() async {
     final XFile? image = await imagePicker.pickImage(source: ImageSource.camera);
-    return image;
+    if (image != null) {
+      return File(image.path);
+    }
+    return null;
   }
 }

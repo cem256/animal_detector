@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/constants/assets.dart';
 import '../../../../core/constants/strings.dart';
 import '../../../../core/extensions/context_extensions.dart';
+import '../../../../core/gen/assets.gen.dart';
 import '../../../../locator.dart';
 import '../../logic/detect_animal_bloc.dart';
 import '../widgets/cards/input_method_card.dart';
@@ -77,8 +77,8 @@ class HomeViewBody extends StatelessWidget {
           ),
           Expanded(
             child: InputMethodCard(
-              onTap: () => context.read<DetectAnimalBloc>().add(const ImageSelectedFromGallery()),
-              imagePath: Assets.icCamera,
+              onTap: () => context.read<DetectAnimalBloc>().add(const TakePhotoPressed()),
+              imagePath: Assets.icons.icCamera.path,
               cardText: "Take a Photo",
             ),
           ),
@@ -87,8 +87,8 @@ class HomeViewBody extends StatelessWidget {
           ),
           Expanded(
             child: InputMethodCard(
-              onTap: () => context.read<DetectAnimalBloc>().add(const ImageSelectedFromGallery()),
-              imagePath: Assets.icGallery,
+              onTap: () => context.read<DetectAnimalBloc>().add(const SelectFromGalleryPressed()),
+              imagePath: Assets.icons.icGallery.path,
               cardText: "Select from Gallery",
             ),
           ),

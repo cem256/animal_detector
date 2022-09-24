@@ -1,12 +1,16 @@
-import 'core/theme/app_theme.dart';
-import 'locator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'core/constants/strings.dart';
+import 'core/theme/app_theme.dart';
 import 'features/detect_animal/presentation/view/detect_animal_view.dart';
+import 'locator.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   initServices();
+
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const AnimalDetector());
 }
 

@@ -1,7 +1,8 @@
 import 'dart:io';
 
-import '../../../../../core/extensions/context_extensions.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/extensions/context_extensions.dart';
 
 class SelectedImage extends StatelessWidget {
   const SelectedImage({super.key, required this.image});
@@ -10,11 +11,14 @@ class SelectedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: context.defaultBorderRadius,
-      child: Image.file(
-        fit: BoxFit.cover,
-        image!,
+    return SizedBox(
+      width: double.infinity,
+      child: ClipRRect(
+        borderRadius: context.defaultBorderRadius,
+        child: Image.file(
+          fit: BoxFit.cover,
+          image!,
+        ),
       ),
     );
   }

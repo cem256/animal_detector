@@ -1,16 +1,17 @@
-# animal_detector
+# Animal Detector
+Animal detection with Flutter and TFLite. Animal Detector makes it possible to identify animals in 10 different categories, including cat, dog, spider, sheep butterfly, horse squirrel, cow, chicken and elephant.
 
-A new Flutter project.
+## Data set
+- [Kaggle](https://www.kaggle.com/datasets/alessiocorrado99/animals10)
 
-## Getting Started
+## Preview
+<p align='center'>
+    <img src="screenshots/1.jpeg" width="32%"/>
+    <img src="screenshots/2.jpeg" width="32%"/>
+    <img src="screenshots/3.jpeg" width="32%"/>
+</p>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##### This project contains generated files. Don't forget to run build runner script before running the project.
+```sh
+sh scripst/build_runner.sh
+```
